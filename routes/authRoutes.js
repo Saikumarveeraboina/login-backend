@@ -71,7 +71,7 @@ router.get('/home', verifyToken, async (req, res) => {
         if (rows.length === 0) {
             return res.status(404).json({ message: "User not exists" });
         }   
-        return res.status(201).json({ message: "User data fetched successfully", user: rows[0] });
+        return res.status(200).json({ message: "User data fetched successfully", user: rows[0] });
 
 
     } catch(error){
